@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all
+
+entity TimeConverter is
+port (
+	startOp : in std_logic;
+
+	inGMTHours  : in std_logic_vector (
+	inGMTMins   : in std_logic_vector (
+	hourIn : in std_logic_vector (4 downto 0);
+        minIn  : in std_logic_vector (5 downto 0);
+        secIn  : in std_logic_vector (4 downto 0);
+
+        doneStatus : out std_logic;
+
+	outGMTHours  : in std_logic_vector  (
+  	outGMTMins   : in std_logic_vector (
+        hourOut : out std_logic_vector (4 downto 0);
+        minOut  : out std_logic_vector (5 downto 0);
+        secOut  : out std_logic_vector (4 downto 0)
+);
+end TimeConverter

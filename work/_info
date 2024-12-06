@@ -1,0 +1,174 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/PSD/Modul9/CS
+Eclock
+Z0 w1733150046
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/PSD/Finpro
+Z5 8D:\PSD\Finpro\Clock.vhd
+Z6 FD:\PSD\Finpro\Clock.vhd
+l0
+L5
+V<ainK[6a809zV<7hflW0B0
+!s100 11jW`E?c44HKT@fYe8zAL0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1733150048
+!i10b 1
+Z9 !s108 1733150047.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\PSD\Finpro\Clock.vhd|
+Z11 !s107 D:\PSD\Finpro\Clock.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asystem
+R1
+R2
+R3
+DEx4 work 5 clock 0 22 <ainK[6a809zV<7hflW0B0
+l33
+L26
+VE6]=b@S<RjBTD70gVi=Sg1
+!s100 aK7H@4h>W;ZCDXc<4ShT52
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eclockfsm
+Z14 w1733153398
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L5
+V2Wd06LDGVE?7i9oUl;<OF3
+!s100 dd1cEGONZmlY`1aXDcoA70
+R7
+32
+Z15 !s110 1733153411
+!i10b 1
+Z16 !s108 1733153411.000000
+R10
+R11
+!i113 1
+R12
+R13
+Afsm
+R1
+R2
+R3
+DEx4 work 8 clockfsm 0 22 2Wd06LDGVE?7i9oUl;<OF3
+l36
+L26
+VAidoAaFRX8FYMKV`i<jE^2
+!s100 HoHGabU:@S8kf;7BPN_i`3
+R7
+32
+R15
+!i10b 1
+R16
+R10
+R11
+!i113 1
+R12
+R13
+Etimeconverter
+Z17 w1733158458
+R1
+R2
+R3
+R4
+Z18 8D:\PSD\Finpro\TimeConverter.vhd
+Z19 FD:\PSD\Finpro\TimeConverter.vhd
+l0
+L5
+Vc9CcANKAFn;jFfNUh=cl?0
+!s100 Mio[Ag;S;NjYKI2b_]Lo03
+R7
+32
+Z20 !s110 1733158461
+!i10b 1
+Z21 !s108 1733158460.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\PSD\Finpro\TimeConverter.vhd|
+Z23 !s107 D:\PSD\Finpro\TimeConverter.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 timeconverter 0 22 c9CcANKAFn;jFfNUh=cl?0
+l32
+L25
+VDibR9Fn8jJXT5]hQ6Xz4F0
+!s100 GK5McZWBl1M>eVhV9`mil3
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R12
+R13
+Etimerfsm
+Z24 w1733153410
+R1
+R2
+R3
+R4
+Z25 8D:\PSD\Finpro\Timer.vhd
+Z26 FD:\PSD\Finpro\Timer.vhd
+l0
+L5
+V`Re<ZzeikaWJ_`W2IC=1I1
+!s100 O^1<=J_7YYOn7881J0zfH1
+R7
+32
+Z27 !s110 1733153415
+!i10b 1
+Z28 !s108 1733153415.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\PSD\Finpro\Timer.vhd|
+Z30 !s107 D:\PSD\Finpro\Timer.vhd|
+!i113 1
+R12
+R13
+Afsm
+R1
+R2
+R3
+DEx4 work 8 timerfsm 0 22 `Re<ZzeikaWJ_`W2IC=1I1
+l32
+L23
+VRXnlnmddYkh4@5abZaAKl1
+!s100 iCVQ_VQ=@cdA;ZC5B@aDJ0
+R7
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
