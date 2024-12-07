@@ -1,0 +1,121 @@
+# Compile of Calculator.vhd was successful.
+vsim -gui work.calculator
+# vsim -gui work.calculator 
+# Start time: 19:27:00 on Dec 07,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/calculator/*
+force -freeze sim:/calculator/startOp 1 0
+force -freeze sim:/calculator/opCode 00 0
+force -freeze sim:/calculator/numIn_a 00001100 0
+force -freeze sim:/calculator/numIn_b 00000100 0
+run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+run
+run
+run
+run
+run
+run
+# Compile of Calculator.vhd failed with 2 errors.
+# Compile of Calculator.vhd failed with 3 errors.
+# Compile of Calculator.vhd was successful.
+vsim -gui work.calculator
+# End time: 19:51:02 on Dec 07,2024, Elapsed time: 0:24:02
+# Errors: 0, Warnings: 6
+# vsim -gui work.calculator 
+# Start time: 19:51:02 on Dec 07,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/calculator/*
+force -freeze sim:/calculator/startOp 1 0
+force -freeze sim:/calculator/opCode 00 0
+force -freeze sim:/calculator/numIn_a 00001100 0
+force -freeze sim:/calculator/numIn_b 00000100 0
+run
+run
+run
+# Compile of Calculator.vhd was successful.
+vsim -gui work.calculator
+# End time: 19:53:58 on Dec 07,2024, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 2
+# vsim -gui work.calculator 
+# Start time: 19:53:58 on Dec 07,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/calculator/*
+force -freeze sim:/calculator/startOp 1 0
+force -freeze sim:/calculator/opCode 00 0
+force -freeze sim:/calculator/numIn_a 00001100 0
+force -freeze sim:/calculator/numIn_b 00000100 0
+run
+run
+run
+run
+# Compile of Calculator.vhd was successful.
+vsim -gui work.calculator
+# End time: 19:59:40 on Dec 07,2024, Elapsed time: 0:05:42
+# Errors: 0, Warnings: 2
+# vsim -gui work.calculator 
+# Start time: 19:59:40 on Dec 07,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/calculator/*
+force -freeze sim:/calculator/startOp 1 0
+force -freeze sim:/calculator/opCode 0 0
+force -freeze sim:/calculator/numIn_a 00001100 0
+force -freeze sim:/calculator/numIn_b 00000100 0
+run
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+run
+force -freeze sim:/calculator/opCode 1 0
+# Compile of Calculator.vhd was successful.
+run
+# Compile of Calculator.vhd was successful.
+vsim -gui work.calculator
+# End time: 20:01:22 on Dec 07,2024, Elapsed time: 0:01:42
+# Errors: 1, Warnings: 5
+# vsim -gui work.calculator 
+# Start time: 20:01:22 on Dec 07,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/calculator/*
+force -freeze sim:/calculator/startOp 0 0
+force -freeze sim:/calculator/opCode 0 0
+force -freeze sim:/calculator/numIn_a 00001100 0
+force -freeze sim:/calculator/numIn_b 00000100 0
+# Compile of Calculator.vhd was successful.
+run
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /calculator
+force -freeze sim:/calculator/startOp 1 0
+run
+force -freeze sim:/calculator/opCode 1 0
+run
+# End time: 20:02:20 on Dec 07,2024, Elapsed time: 0:00:58
+# Errors: 1, Warnings: 4

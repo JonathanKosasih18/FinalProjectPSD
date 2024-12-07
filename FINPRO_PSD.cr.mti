@@ -1,0 +1,19 @@
+C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Calculator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Calculator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Calculator
+-- Compiling architecture Behavioral of Calculator
+
+} {} {}} C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TimeCalculator
+-- Compiling architecture Behavioral of TimeCalculator
+
+} {} {}}
