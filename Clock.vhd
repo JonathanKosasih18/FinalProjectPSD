@@ -100,7 +100,6 @@ BEGIN
 
     minOut <= STD_LOGIC_VECTOR(minBuffer);
     secOut <= STD_LOGIC_VECTOR(secBuffer);
-
     runStatus <= clockRun;
     formatStatus <= format12;
     meridiemStatus <= am_pm;

@@ -26,7 +26,6 @@ ARCHITECTURE fsm OF TimerFSM IS
     SIGNAL hourBuffer : signed (4 DOWNTO 0);
     SIGNAL minBuffer : signed (5 DOWNTO 0);
     SIGNAL secBuffer : signed (4 DOWNTO 0);
-
 BEGIN
     PROCESS (clockIn)
     BEGIN

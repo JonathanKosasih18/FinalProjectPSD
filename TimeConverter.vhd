@@ -34,23 +34,19 @@ BEGIN
             -- Convert local time to GMT
             gmtHours <= signed(hourIn) - signed(inGMTHours);
             gmtMins <= signed(minIn) - signed(inGMTMins);
-
             -- Adjust for negative minutes
             IF gmtMins < 0 THEN
                 gmtMins <= gmtMins + 60;
                 gmtHours <= gmtHours - 1;
             END IF;
-
             -- Adjust for negative hours
             IF gmtHours < 0 THEN
                 gmtHours <= gmtHours + 24;
             END IF;
-
             -- Output the converted time
             hourOut <= STD_LOGIC_VECTOR(gmtHours);
             minOut <= STD_LOGIC_VECTOR(gmtMins);
             secOut <= secIn;
-
             -- Set done status
             doneStatus <= '1';
         ELSE

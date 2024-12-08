@@ -1,0 +1,89 @@
+# Compile of Calculator.vhd was successful.
+# Compile of Clock.vhd was successful.
+# Compile of SmartClock.vhd failed with 3 errors.
+# Compile of TimeCalculator.vhd was successful.
+# Compile of TimeConverter.vhd was successful.
+# Compile of Timer.vhd was successful.
+# 6 compiles, 1 failed with 3 errors.
+# Compile of SmartClock.vhd was successful.
+# Compile of SmartClock.vhd was successful.
+# Break key hit
+vsim -gui work.smartclock
+# vsim -gui work.smartclock 
+# Start time: 22:06:16 on Dec 08,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.smartclock(behavioral)
+# Loading work.timeconverter(behavioral)
+# Loading work.timecalculator(behavioral)
+# Loading work.clockfsm(fsm)
+# Loading work.calculator(behavioral)
+add wave -position insertpoint sim:/smartclock/*
+# Compile of Calculator.vhd was successful.
+# Compile of Clock.vhd was successful.
+# Compile of SmartClock.vhd was successful.
+# Compile of TimeCalculator.vhd was successful.
+# Compile of TimeConverter.vhd was successful.
+# Compile of Timer.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of SmartClock_TB.vhd was successful.
+vsim -gui work.smartclock_tb
+# End time: 22:15:43 on Dec 08,2024, Elapsed time: 0:09:27
+# Errors: 0, Warnings: 7
+# vsim -gui work.smartclock_tb 
+# Start time: 22:15:43 on Dec 08,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.smartclock_tb(behavior)
+# Loading work.smartclock(behavioral)
+# Loading work.timeconverter(behavioral)
+# Loading work.timecalculator(behavioral)
+# Loading work.clockfsm(fsm)
+# Loading work.calculator(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /smartclock_tb/uut/doneStatus has no driver.
+# This port will contribute value (U) to the signal network.
+add wave -position insertpoint sim:/smartclock_tb/*
+run -all
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/Calculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/Calculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/Calculator_inst
+# ** Error: (vsim-86) Argument value -596523 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /smartclock_tb/uut/TimeCalculator_inst
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 130 ns  Iteration: 1  Instance: /smartclock_tb/uut/TimerConverter_inst
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 130 ns  Iteration: 1  Instance: /smartclock_tb/uut/TimerConverter_inst
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 135 ns ###############
+#       Signal: /smartclock_tb/uut/clock_secOut @ sub-iteration 0 at Value unknown (C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock.vhd:52)
+#       Signal: /smartclock_tb/uut/ClockFSM_inst/secBuffer @ sub-iteration 0 at Value unknown (C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Clock.vhd:31)
+#   Active process: /smartclock_tb/uut/ClockFSM_inst/line__41 @ sub-iteration 1
+#     Source: C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock.vhd:103
+#   Active process: /smartclock_tb/uut/ClockFSM_inst/line__102 @ sub-iteration 1
+#     Source: C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock.vhd:103
+#       Signal: /smartclock_tb/uut/clock_secOut @ sub-iteration 2 at Value unknown (C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock.vhd:52)
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 135 ns.
