@@ -8,6 +8,29 @@ Dengan menggabungkan fungsi aritmatika dan manajemen waktu dalam satu perangkat,
 
 Proyek ini merupakan pengembangan sebuah program berbasis VHDL yang dirancang untuk meningkatkan pengelolaan waktu secara efisien. Dengan fokus pada simulasi rangkaian dan tanpa implementasi langsung pada perangkat keras, program ini menggunakan pendekatan berbasis Truth Table dan Testbench. Dengan metode ini, proyek tidak hanya berfungsi sebagai solusi praktis dalam manajemen waktu, tetapi juga menjadi media pembelajaran untuk memahami bagaimana konsep logika digital dapat diterapkan dalam desain dan pengembangan sistem berbasis VHDL.
 
+## Components
+
+This project is composed of five parts;
+
+> Clock
+
+The Clock component simulates how a clock works. It shows the time in hours, minutes, and seconds. It is also capable of showing time in 12-hour and 24-hour format.
+
+> Timer
+
+The Timer component is able to function as a timer; the component receives a time in hours, minutes, and seconds, and it will count down until the time becomes zero and it will ring an alert or reminder.
+
+> Time Converter
+
+The Time Converter is capable of converting a time based on it's Greenwich Mean Time (GMT), to another time in a different GMT.
+
+> Time Calculator
+
+The Time Calculator Component can be used to find the sum , or to find the difference of two times.
+
+> Calculator
+
+This simple Calculator is able to do addition and subtraction.
 
 
 

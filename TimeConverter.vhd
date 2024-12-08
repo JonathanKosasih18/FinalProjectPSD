@@ -4,7 +4,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY TimeConverter IS
     PORT (
-        startOp : IN STD_LOGIC;
+        clk : IN STD_LOGIC;
 
         inGMTHours : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
         inGMTMins : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
@@ -28,9 +28,9 @@ ARCHITECTURE Behavioral OF TimeConverter IS
     SIGNAL gmtHours : signed (4 DOWNTO 0);
     SIGNAL gmtMins : signed (5 DOWNTO 0);
 BEGIN
-    PROCESS (startOp)
+    PROCESS (clk)
     BEGIN
-        IF rising_edge(startOp) THEN
+        IF rising_edge(clk) THEN
             -- Convert local time to GMT
             gmtHours <= signed(hourIn) - signed(inGMTHours);
             gmtMins <= signed(minIn) - signed(inGMTMins);
@@ -43,14 +43,13 @@ BEGIN
             IF gmtHours < 0 THEN
                 gmtHours <= gmtHours + 24;
             END IF;
-            -- Output the converted time
-            hourOut <= STD_LOGIC_VECTOR(gmtHours);
-            minOut <= STD_LOGIC_VECTOR(gmtMins);
-            secOut <= secIn;
-            -- Set done status
-            doneStatus <= '1';
-        ELSE
-            doneStatus <= '0';
         END IF;
     END PROCESS;
+
+    -- Output the converted time
+    hourOut <= STD_LOGIC_VECTOR(gmtHours);
+    minOut <= STD_LOGIC_VECTOR(gmtMins);
+    secOut <= secIn;
+    -- Set done status
+    doneStatus <= '1';
 END Behavioral;
