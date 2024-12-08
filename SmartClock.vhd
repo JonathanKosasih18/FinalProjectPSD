@@ -73,7 +73,8 @@ BEGIN
     TimeCalculator_inst : ENTITY work.TimeCalculator
         PORT MAP(
             startOp => clockRun,
-            opCode => '0', -- Example: 0 for subtraction, 1 for addition
+            -- Example: 0 for subtraction, 1 for addition
+            opCode => '0',
             hourIn_a => hourIn,
             minIn_a => minIn,
             secIn_a => secIn,
@@ -105,7 +106,8 @@ BEGIN
     Calculator_inst : ENTITY work.Calculator
         PORT MAP(
             startOp => clockRun,
-            opCode => '1', -- Example: 1 for addition, 0 for subtraction
+            -- Example: 1 for addition, 0 for subtraction
+            opCode => '1',
             numIn_a => numIn_a,
             numIn_b => numIn_b,
             numOut => numOut

@@ -127,6 +127,33 @@ BEGIN
         clockRun <= '0';
         WAIT FOR clock_period * 2;
 
+        -- Test 7: TimeCalculator Testing
+        WAIT FOR clock_period * 2;
+
+        -- Set first time (01:30:00)
+        clockSet <= '1';
+        hourIn <= "00001"; -- 1 hour
+        minIn <= "011110"; -- 30 minutes
+        secIn <= "00000"; -- 00 seconds
+        WAIT FOR clock_period;
+        clockSet <= '0';
+
+        -- Set second time (00:30:00) and start calculation
+        clockRun <= '1';
+        hourIn <= "00000"; -- 0 hours
+        minIn <= "011110"; -- 30 minutes
+        secIn <= "00000"; -- 00 seconds
+        WAIT FOR clock_period * 4;
+
+        -- Verify calculation (should subtract: 01:00:00)
+        ASSERT hourOut = "00001"
+        REPORT "TimeCalculator subtraction failed"
+            SEVERITY ERROR;
+
+        -- Reset
+        clockRun <= '0';
+        WAIT FOR clock_period * 2;
+
         -- End simulation
         WAIT;
     END PROCESS;

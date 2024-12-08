@@ -184,11 +184,11 @@ R37
 R12
 R13
 Esmartclock_tb
-Z40 w1733670894
+Z40 w1733671983
 R1
 R2
 R3
-!i122 37
+!i122 38
 R4
 Z41 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd
 Z42 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd
@@ -198,11 +198,11 @@ V>GSzdVWeS3ZS^2Nc@S[3z1
 !s100 PSW4:5dzSC?8lUc97YC2]1
 R7
 32
-Z43 !s110 1733670923
+Z43 !s110 1733671989
 !i10b 1
-Z44 !s108 1733670923.000000
+Z44 !s108 1733671989.000000
 Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd|
-!s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd|
+Z46 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd|
 !i113 1
 R12
 R13
@@ -210,19 +210,19 @@ Abehavior
 R1
 R2
 R3
-DEx4 work 13 smartclock_tb 0 22 >GSzdVWeS3ZS^2Nc@S[3z1
-!i122 37
+Z47 DEx4 work 13 smartclock_tb 0 22 >GSzdVWeS3ZS^2Nc@S[3z1
+!i122 38
 l60
-L8 127
-V:b7Q>XMFj6PU?EzWXWjVC2
-!s100 NZV1?hAiaUiY_lM@KVe;F2
+L8 154
+V^FiYiH:2d6j?Socl?Szh10
+!s100 P45ka4CjJDND8D^]67_871
 R7
 32
 R43
 !i10b 1
 R44
 R45
-Z46 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock_TB.vhd|
+R46
 !i113 1
 R12
 R13
@@ -233,8 +233,8 @@ R2
 R3
 !i122 34
 R4
-Z47 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd
-Z48 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd
+Z48 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd
+Z49 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd
 l0
 L5 1
 Vd1ZhYVHCU:gNeShNeCngc2
@@ -243,9 +243,9 @@ R7
 32
 R35
 !i10b 1
-Z49 !s108 1733670397.000000
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd|
-Z51 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd|
+Z50 !s108 1733670397.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd|
+Z52 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeCalculator.vhd|
 !i113 1
 R12
 R13
@@ -263,21 +263,21 @@ R7
 32
 R35
 !i10b 1
-R49
 R50
 R51
+R52
 !i113 1
 R12
 R13
 Etimeconverter
-Z52 w1733670117
+Z53 w1733670117
 R1
 R2
 R3
 !i122 35
 R4
-Z53 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd
-Z54 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd
+Z54 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd
+Z55 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd
 l0
 L5 1
 V`2PWiSlaQm>6;A4ogOKYG1
@@ -286,9 +286,9 @@ R7
 32
 R35
 !i10b 1
-R49
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd|
-Z56 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd|
+R50
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd|
+Z57 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/TimeConverter.vhd|
 !i113 1
 R12
 R13
@@ -306,21 +306,21 @@ R7
 32
 R35
 !i10b 1
-R49
-R55
+R50
 R56
+R57
 !i113 1
 R12
 R13
 Etimerfsm
-Z57 w1733670110
+Z58 w1733670110
 R1
 R2
 R3
 !i122 36
 R4
-Z58 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd
-Z59 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd
+Z59 8C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd
+Z60 FC:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd
 l0
 L5 1
 Vo89`D750]BZHIhBLmlMSV3
@@ -329,9 +329,9 @@ R7
 32
 R35
 !i10b 1
-R49
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd|
-Z61 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd|
+R50
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd|
+Z62 !s107 C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/Timer.vhd|
 !i113 1
 R12
 R13
@@ -349,9 +349,9 @@ R7
 32
 R35
 !i10b 1
-R49
-R60
+R50
 R61
+R62
 !i113 1
 R12
 R13
