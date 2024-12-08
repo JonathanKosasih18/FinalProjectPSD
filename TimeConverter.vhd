@@ -1,65 +1,56 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity TimeConverter is
-    port (
-        startOp : in std_logic;
+ENTITY TimeConverter IS
+    PORT (
+        startOp : IN STD_LOGIC;
 
-        inGMTHours  : in std_logic_vector (4 downto 0);
-        inGMTMins   : in std_logic_vector (5 downto 0);
-        hourIn      : in std_logic_vector (4 downto 0);
-        minIn       : in std_logic_vector (5 downto 0);
-        secIn       : in std_logic_vector (4 downto 0);
+        inGMTHours : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+        inGMTMins : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        hourIn : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+        minIn : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        secIn : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 
-        doneStatus  : out std_logic;
+        doneStatus : OUT STD_LOGIC;
 
-        outGMTHours : out std_logic_vector (4 downto 0);
-        outGMTMins  : out std_logic_vector (5 downto 0);
-        hourOut     : out std_logic_vector (4 downto 0);
-        minOut      : out std_logic_vector (5 downto 0);
-        secOut      : out std_logic_vector (4 downto 0)
+        outGMTHours : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+        outGMTMins : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+        hourOut : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+        minOut : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+        secOut : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
     );
-end TimeConverter;
+END TimeConverter;
 
-architecture Behavioral of TimeConverter is
-
-    signal localHours : signed (4 downto 0);
-    signal localMins  : signed (5 downto 0);
-    signal gmtHours   : signed (4 downto 0);
-    signal gmtMins    : signed (5 downto 0);
-
-begin
-
-    process(startOp)
-    begin
-        if rising_edge(startOp) then
+ARCHITECTURE Behavioral OF TimeConverter IS
+    SIGNAL localHours : signed (4 DOWNTO 0);
+    SIGNAL localMins : signed (5 DOWNTO 0);
+    SIGNAL gmtHours : signed (4 DOWNTO 0);
+    SIGNAL gmtMins : signed (5 DOWNTO 0);
+BEGIN
+    PROCESS (startOp)
+    BEGIN
+        IF rising_edge(startOp) THEN
             -- Convert local time to GMT
             gmtHours <= signed(hourIn) - signed(inGMTHours);
-            gmtMins  <= signed(minIn) - signed(inGMTMins);
-
+            gmtMins <= signed(minIn) - signed(inGMTMins);
             -- Adjust for negative minutes
-            if gmtMins < 0 then
+            IF gmtMins < 0 THEN
                 gmtMins <= gmtMins + 60;
                 gmtHours <= gmtHours - 1;
-            end if;
-
+            END IF;
             -- Adjust for negative hours
-            if gmtHours < 0 then
+            IF gmtHours < 0 THEN
                 gmtHours <= gmtHours + 24;
-            end if;
-
+            END IF;
             -- Output the converted time
-            hourOut <= std_logic_vector(gmtHours);
-            minOut  <= std_logic_vector(gmtMins);
-            secOut  <= secIn;
-
+            hourOut <= STD_LOGIC_VECTOR(gmtHours);
+            minOut <= STD_LOGIC_VECTOR(gmtMins);
+            secOut <= secIn;
             -- Set done status
             doneStatus <= '1';
-        else
+        ELSE
             doneStatus <= '0';
-        end if;
-    end process;
-
-end Behavioral;
-
+        END IF;
+    END PROCESS;
+END Behavioral;
