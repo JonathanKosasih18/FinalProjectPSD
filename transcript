@@ -146,3 +146,5 @@ run -all
 #       Signal: /smartclock_tb/uut/clock_secOut @ sub-iteration 2 at Value unknown (C:/Users/jonat/OneDrive/Documents/university/smt3/psd/prak/finpro/FinalProjectPSD/SmartClock.vhd:52)
 ################# END OF LOOP #################
 # ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 135 ns.
+# End time: 23:41:10 on Dec 08,2024, Elapsed time: 1:07:54
+# Errors: 3, Warnings: 14
