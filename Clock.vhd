@@ -1,116 +1,107 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity ClockFSM is
-    port(
-        clockIn  : in std_logic;
-        clockSet : in std_logic;
-        clockRun : in std_logic;
-        format12 : in std_logic;
+ENTITY ClockFSM IS
+    PORT (
+        clockIn : IN STD_LOGIC;
+        clockSet : IN STD_LOGIC;
+        clockRun : IN STD_LOGIC;
+        format12 : IN STD_LOGIC;
 
-        hourIn : in std_logic_vector (4 downto 0);
-        minIn  : in std_logic_vector (5 downto 0);
-        secIn  : in std_logic_vector (4 downto 0);
+        hourIn : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+        minIn : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        secIn : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
 
-        runStatus      : out std_logic;
-        formatStatus   : out std_logic;
-        meridiemStatus : out std_logic;
+        runStatus : OUT STD_LOGIC;
+        formatStatus : OUT STD_LOGIC;
+        meridiemStatus : OUT STD_LOGIC;
 
-        hourOut : out std_logic_vector (4 downto 0);
-        minOut  : out std_logic_vector (5 downto 0);
-        secOut  : out std_logic_vector (4 downto 0)
+        hourOut : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+        minOut : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+        secOut : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
     );
-end ClockFSM;
+END ClockFSM;
 
-architecture fsm of ClockFSM is
-
-    type state_type is (IDLE, SET, RUN);
-    signal state, next_state : state_type;
-
-    signal hourBuffer : unsigned (4 downto 0);
-    signal minBuffer  : unsigned (5 downto 0);
-    signal secBuffer  : unsigned (4 downto 0);
-    signal am_pm      : std_logic;
-
-begin
-
-    process(clockIn)
-    begin
-        if rising_edge(clockIn) then
+ARCHITECTURE fsm OF ClockFSM IS
+    TYPE state_type IS (IDLE, SET, RUN);
+    SIGNAL state, next_state : state_type;
+    SIGNAL hourBuffer : unsigned (4 DOWNTO 0);
+    SIGNAL minBuffer : unsigned (5 DOWNTO 0);
+    SIGNAL secBuffer : unsigned (4 DOWNTO 0);
+    SIGNAL am_pm : STD_LOGIC;
+BEGIN
+    PROCESS (clockIn)
+    BEGIN
+        IF rising_edge(clockIn) THEN
             state <= next_state;
-        end if;
-    end process;
+        END IF;
+    END PROCESS;
 
-    process(state, clockSet, clockRun, hourIn, minIn, secIn, hourBuffer, minBuffer, secBuffer)
-    begin
-        case state is
-            when IDLE =>
-                if clockSet = '1' then
+    PROCESS (state, clockSet, clockRun, hourIn, minIn, secIn, hourBuffer, minBuffer, secBuffer)
+    BEGIN
+        CASE state IS
+            WHEN IDLE =>
+                IF clockSet = '1' THEN
                     next_state <= SET;
-                elsif clockRun = '1' then
+                ELSIF clockRun = '1' THEN
                     next_state <= RUN;
-                else
+                ELSE
                     next_state <= IDLE;
-                end if;
-
-            when SET =>
+                END IF;
+            WHEN SET =>
                 hourBuffer <= unsigned(hourIn);
-                minBuffer  <= unsigned(minIn);
-                secBuffer  <= unsigned(secIn);
+                minBuffer <= unsigned(minIn);
+                secBuffer <= unsigned(secIn);
                 next_state <= IDLE;
-
-            when RUN =>
-                if secBuffer = 59 then
-                    secBuffer <= (others => '0');
-                    if minBuffer = 59 then
-                        minBuffer <= (others => '0');
-                        if hourBuffer = 23 then
-                            hourBuffer <= (others => '0');
-                        else
+            WHEN RUN =>
+                IF secBuffer = 59 THEN
+                    secBuffer <= (OTHERS => '0');
+                    IF minBuffer = 59 THEN
+                        minBuffer <= (OTHERS => '0');
+                        IF hourBuffer = 23 THEN
+                            hourBuffer <= (OTHERS => '0');
+                        ELSE
                             hourBuffer <= hourBuffer + 1;
-                        end if;
-                    else
+                        END IF;
+                    ELSE
                         minBuffer <= minBuffer + 1;
-                    end if;
-                else
+                    END IF;
+                ELSE
                     secBuffer <= secBuffer + 1;
-                end if;
+                END IF;
                 next_state <= RUN;
-
-            when others =>
+            WHEN OTHERS =>
                 next_state <= IDLE;
-        end case;
-    end process;
+        END CASE;
+    END PROCESS;
 
-    process(hourBuffer, format12)
-    begin
-        if format12 = '1' then
-            if hourBuffer = 0 then
-                hourOut <= std_logic_vector(to_unsigned(12, 5));
+    PROCESS (hourBuffer, format12)
+    BEGIN
+        IF format12 = '1' THEN
+            IF hourBuffer = 0 THEN
+                hourOut <= STD_LOGIC_VECTOR(to_unsigned(12, 5));
                 am_pm <= '0'; -- AM
-            elsif hourBuffer < 12 then
-                hourOut <= std_logic_vector(hourBuffer);
+            ELSIF hourBuffer < 12 THEN
+                hourOut <= STD_LOGIC_VECTOR(hourBuffer);
                 am_pm <= '0'; -- AM
-            elsif hourBuffer = 12 then
-                hourOut <= std_logic_vector(hourBuffer);
+            ELSIF hourBuffer = 12 THEN
+                hourOut <= STD_LOGIC_VECTOR(hourBuffer);
                 am_pm <= '1'; -- PM
-            else
-                hourOut <= std_logic_vector(hourBuffer - 12);
+            ELSE
+                hourOut <= STD_LOGIC_VECTOR(hourBuffer - 12);
                 am_pm <= '1'; -- PM
-            end if;
-        else
-            hourOut <= std_logic_vector(hourBuffer);
+            END IF;
+        ELSE
+            hourOut <= STD_LOGIC_VECTOR(hourBuffer);
             am_pm <= '0'; -- Placeholder for 24-hour format
-        end if;
-    end process;
+        END IF;
+    END PROCESS;
 
-    minOut  <= std_logic_vector(minBuffer);
-    secOut  <= std_logic_vector(secBuffer);
+    minOut <= STD_LOGIC_VECTOR(minBuffer);
+    secOut <= STD_LOGIC_VECTOR(secBuffer);
 
-    runStatus      <= clockRun;
-    formatStatus   <= format12;
+    runStatus <= clockRun;
+    formatStatus <= format12;
     meridiemStatus <= am_pm;
-
-end fsm;
-
+END fsm;
